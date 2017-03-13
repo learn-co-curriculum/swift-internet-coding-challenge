@@ -151,6 +151,4 @@ DELETE /books/1
 Response:
 
 Status 200 
-Clear all Books
-
 ```
