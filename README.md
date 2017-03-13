@@ -9,6 +9,8 @@ You should include a README, that contains at least some implementation details 
 
 ###Wireframes
 
+###Note The Wireframes include a category/tag field. This is to be ignored
+
 Screen 1: This screen lists the books in the library. Pressing the + button brings you to the Add Book screen in a modal. Pressing an item in the table brings you to the Detail screen.
 
 ![](http://prolific-interview.herokuapp.com/static/ios/screen-1.png)
