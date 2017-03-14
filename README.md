@@ -1,5 +1,5 @@
 ### Synopsis
- 
+
 I completed the Swift-Internet-Coding Challenge (BookClub).
 
 ### Architecture
