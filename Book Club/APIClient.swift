@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class APIClient {
+final class APIClient {
     
     class func getBooks(completion: @escaping ([Book]) -> Void ) {
         Alamofire.request("https://flatironchallenge.herokuapp.com/books").responseJSON { response in
@@ -23,6 +23,54 @@ class APIClient {
                 completion(returnBooks)
             }
         }
+    }
+    
+    class func postBook(author: String, title: String, publisher: String, url: String, completion: @escaping () -> Void) {
+        
+        let parameters: Parameters = [
+            "title": title,
+            "url": url,
+            "publisher": publisher,
+            "author": author
+        ]
+        
+        Alamofire.request("https://flatironchallenge.herokuapp.com/books", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { (response) in
+            switch response.result {
+            case .success:
+                print("Book Added Succesfully")
+                completion()
+            case .failure(let error):
+                print(error)
+                completion()
+            }
+        }
         
     }
+    
+    class func checkoutbook(name: String, timeStamp: String, id: Int, completion: @escaping () -> Void) {
+        
+        let parameters: Parameters = [
+            // TODO - user defaults add name
+            "lastcheckedoutby" : "Ben at \(timeStamp)"
+        ]
+        
+        Alamofire.request("https://flatironchallenge.herokuapp.com/books/\(id)", method: .put, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { (response) in
+            switch response.result {
+            case .success:
+                print("Book Checked Out Succeesfully")
+                completion()
+            case .failure(let error):
+                print(error)
+                completion()
+            }
+        }
+        
+    }
+
+    
+    
 }
+
+
+
+

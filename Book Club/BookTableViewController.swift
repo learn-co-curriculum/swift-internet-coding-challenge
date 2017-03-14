@@ -18,15 +18,18 @@ class BookTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         APIClient.getBooks { (arrayOfBooks) in
+            self.books.removeAll()
             self.books.append(contentsOf: arrayOfBooks)
+            self.books.sort { $0.0.title < $0.1.title }
         }
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
@@ -50,7 +53,6 @@ class BookTableViewController: UITableViewController {
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             let selectedRow = indexPath.row

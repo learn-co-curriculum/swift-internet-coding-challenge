@@ -22,16 +22,21 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let book = book {
+            print("book last checkout is \(book.lastCheckedOut) and by is \(book.lastCheckedOutBy)")
             titleLabel.text = book.title
             authorLabel.text = book.author
             publisherLabel.text = book.publisher
-            lastCheckOutLabel.text = (book.lastCheckedOut ?? "") + (book.lastCheckedOutBy ?? "")
+            lastCheckOutLabel.text = book.lastCheckedOutBy
     
         }
-        
         
     }
     
     @IBAction func checkoutAction(_ sender: Any) {
+        guard let book = book else { return }
+
+        APIClient.checkoutbook(name: "Ben", timeStamp: currentTime(), id: book.id) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
