@@ -132,14 +132,13 @@ Sample Response:
 
 Status 200 Ok
 {
-    "author": "Ash Maurya",
-    "categories": "process",
+    "author": "Ash Maurya"
     "id": 1,
-    "lastCheckedOut": "2014-10-1 19:16:11",
+    "lastCheckedOut": true,
     "lastCheckedOutBy": "Prolific Pablo",
     "publisher": "O'REILLY",
     "title": "Running Lean",
-    "url": "/books/1"
+    "url": ""
 }
 
 ```
