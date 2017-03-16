@@ -28,16 +28,38 @@ class LibraryAPIManager {
         }
     }
     
-    static func addBook(parameters: [[String: Any]], completion: @escaping () -> () ) {
-//        Alamofire.request(booksURL, method: .post, parameters: parameters, encoding: JSONEncoding, headers: nil)
+    static func addBook(parameters: [String: Any], completion: () -> () ) {
+        Alamofire.request(booksURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).response { (response) in
+            if let unwappedResponse = response.response {
+                print("Status Code: \(unwappedResponse.statusCode)")
+            } else {
+                fatalError("Invalid response")
+            }
+        }
     }
     
-    static func updateBook() {
-        
+    static func checkoutBook(parameters: [String: Any], bookID: Int, completion: () -> ()) {
+        let url = URL(string: "\(booksURL)/\(bookID)")
+        guard let unwrappedUrl = url else { fatalError("Invalid URL") }
+        Alamofire.request(unwrappedUrl, method: .put, parameters: parameters, encoding: JSONEncoding.default).response { (response) in
+            if let unwappedResponse = response.response {
+                print("Status Code: \(unwappedResponse.statusCode)")
+            } else {
+                fatalError("Invalid response")
+            }
+        }
     }
     
-    static func deleteBook() {
-        
+    static func deleteBook(bookID: Int, completion: () -> ()) {
+        let url = URL(string: "\(booksURL)/\(bookID)")
+        guard let unwrappedUrl = url else { fatalError("Invalid URL") }
+        Alamofire.request(unwrappedUrl, method: .delete, encoding: JSONEncoding.default).response { (response) in
+            if let unwappedResponse = response.response {
+                print("Status Code: \(unwappedResponse.statusCode)")
+            } else {
+                fatalError("Invalid response")
+            }
+        }
     }
     
 }

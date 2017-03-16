@@ -16,7 +16,6 @@
 		988DE2C91E7798C70036B1C0 /* FlatironLibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2C81E7798C70036B1C0 /* FlatironLibraryUITests.swift */; };
 		988DE2D71E7799A60036B1C0 /* LibraryAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2D61E7799A60036B1C0 /* LibraryAPIManager.swift */; };
 		988DE2DB1E779B670036B1C0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2DA1E779B670036B1C0 /* Book.swift */; };
-		988DE2DD1E78440A0036B1C0 /* LibraryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2DC1E78440A0036B1C0 /* LibraryDataStore.swift */; };
 		98EAEB291E785250009255FA /* URLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EAEB281E785250009255FA /* URLData.swift */; };
 		98EAEB2B1E7857A7009255FA /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EAEB2A1E7857A7009255FA /* LibraryTableViewController.swift */; };
 		98EAEB301E78581B009255FA /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EAEB2F1E78581B009255FA /* BookTableViewCell.swift */; };
@@ -59,7 +58,6 @@
 		988DE2CA1E7798C70036B1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		988DE2D61E7799A60036B1C0 /* LibraryAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPIManager.swift; sourceTree = "<group>"; };
 		988DE2DA1E779B670036B1C0 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		988DE2DC1E78440A0036B1C0 /* LibraryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryDataStore.swift; sourceTree = "<group>"; };
 		98EAEB281E785250009255FA /* URLData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLData.swift; sourceTree = "<group>"; };
 		98EAEB2A1E7857A7009255FA /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		98EAEB2F1E78581B009255FA /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			children = (
 				988DE2A81E7798C60036B1C0 /* AppDelegate.swift */,
 				988DE2DA1E779B670036B1C0 /* Book.swift */,
-				988DE2DC1E78440A0036B1C0 /* LibraryDataStore.swift */,
 				98EAEB281E785250009255FA /* URLData.swift */,
 				988DE2D61E7799A60036B1C0 /* LibraryAPIManager.swift */,
 			);
@@ -187,8 +184,8 @@
 		98EAEB2E1E7857C6009255FA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				98EAEB331E78970A009255FA /* AddBookViewController.swift */,
 				98EAEB2A1E7857A7009255FA /* LibraryTableViewController.swift */,
+				98EAEB331E78970A009255FA /* AddBookViewController.swift */,
 				98EAEB311E7889BD009255FA /* BookDetailViewController.swift */,
 			);
 			name = Controllers;
@@ -383,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98EAEB2B1E7857A7009255FA /* LibraryTableViewController.swift in Sources */,
-				988DE2DD1E78440A0036B1C0 /* LibraryDataStore.swift in Sources */,
 				988DE2A91E7798C60036B1C0 /* AppDelegate.swift in Sources */,
 				98EAEB301E78581B009255FA /* BookTableViewCell.swift in Sources */,
 				98EAEB291E785250009255FA /* URLData.swift in Sources */,

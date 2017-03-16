@@ -38,6 +38,19 @@ class BookDetailViewController: UIViewController {
         }
     }
 
+    @IBAction func checkoutBook(_ sender: Any) {
+        guard let unwrappedBook = book else { return }
+        let checkoutDetails: [String: Any] = [
+            "lastcheckedout": true,
+            "lastcheckedoutby": "Pree \(NSDate())",
+        ]
+        LibraryAPIManager.checkoutBook(parameters: checkoutDetails, bookID: unwrappedBook.bookID) {
+            print("Checked out \(book?.title)")
+        }
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

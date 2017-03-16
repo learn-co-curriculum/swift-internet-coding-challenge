@@ -8,18 +8,21 @@
 
 import UIKit
 
-class LibraryTableViewController: UITableViewController {
+class LibraryTableViewController: UITableViewController, ReloadDelegate {
     
-    let store = LibraryDataStore.sharedInstance
+    var books: [Book] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Store in VC holds \(store.books.count) books")
-        store.createBooks {
+        createBooks {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,14 +33,14 @@ class LibraryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return store.books.count
+        return books.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath) as! BookTableViewCell
-        cell.bookTitle.text = store.books[indexPath.row].title
-        cell.bookSubtitle.text = store.books[indexPath.row].author
+        cell.bookTitle.text = books[indexPath.row].title
+        cell.bookSubtitle.text = books[indexPath.row].author
         return cell
     }
 
@@ -48,10 +51,32 @@ class LibraryTableViewController: UITableViewController {
         if segue.identifier != "showDetail" { return }
         if let dest = segue.destination as? BookDetailViewController,
             let indexPath = tableView.indexPathForSelectedRow {
-            print(store.books[indexPath.row].description)
-            dest.book = store.books[indexPath.row]
+            print(books[indexPath.row].description)
+            dest.book = books[indexPath.row]
         }
     }
     
-
+    func reloadTableView() {
+        self.tableView.reloadData()
+    }
+    
+    func createBooks(completion: @escaping () -> ()) {
+        LibraryAPIManager.getBooks { (JSONObjects) in
+            self.books.removeAll()
+            for object in JSONObjects {
+                let book = Book(dict: object)
+                self.books.append(book)
+            }
+            print("The DataStore's book array holds \(self.books.count) books")
+            completion()
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }

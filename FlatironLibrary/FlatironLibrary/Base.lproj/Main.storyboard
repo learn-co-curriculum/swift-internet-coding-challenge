@@ -112,6 +112,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPressed:" destination="zPg-DJ-0Tg" eventType="touchUpInside" id="vRa-Nn-Atk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,6 +122,12 @@
                     <navigationItem key="navigationItem" id="Npw-s1-8pq">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="WL6-BI-rel"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bookAuthor" destination="qhZ-oU-F0h" id="dsb-Ud-gAX"/>
+                        <outlet property="bookTitle" destination="0rM-Hd-qJT" id="V88-mj-fNZ"/>
+                        <outlet property="bookURL" destination="KPz-Ak-ZQH" id="Y6F-vs-lJ7"/>
+                        <outlet property="publisher" destination="QkA-yd-WIV" id="EQh-vQ-3dH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAC-We-BTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,6 +180,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Checkout"/>
+                                <connections>
+                                    <action selector="checkoutBook:" destination="qqO-1b-adM" eventType="touchUpInside" id="9pZ-8w-le7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

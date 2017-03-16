@@ -15,6 +15,7 @@ class Book: CustomStringConvertible {
     let publisher: String
     let title: String
     let url: String
+    let bookID: Int
     var description: String {
         return "Title: \(self.title)\nAuthor: \(self.author)\nPublisher: \(self.publisher)\nLast Checked Out: \(self.lastCheckedOut)\nLastCheckedOutBy: \(self.lastCheckedOutBy)\nURL: \(self.url)"
     }
@@ -26,6 +27,7 @@ class Book: CustomStringConvertible {
         self.publisher = dict["publisher"] as? String ?? "N/A"
         self.title = dict["title"] as? String ?? "N/A"
         self.url = dict["url"] as? String ?? "N/A"
+        self.bookID = dict["id"] as? Int ?? 0
     }
     
     
