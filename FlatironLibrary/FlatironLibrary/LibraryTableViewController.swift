@@ -67,16 +67,27 @@ class LibraryTableViewController: UITableViewController, ReloadDelegate {
                 let book = Book(dict: object)
                 self.books.append(book)
             }
-            print("The DataStore's book array holds \(self.books.count) books")
+            print("The book array holds \(self.books.count) books")
             completion()
         }
     }
     
     
+    //Added swipe to delete funtionality
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
-    
-    
-    
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            dump(books[indexPath.row])
+            let id = books[indexPath.row].bookID
+            LibraryAPIManager.deleteBook(bookID: id, completion: {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            })
+        }
+    }
     
 }

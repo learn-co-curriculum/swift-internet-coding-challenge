@@ -20,6 +20,7 @@ class BookDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Detail"
+        
         setupDetails()
     }
 
