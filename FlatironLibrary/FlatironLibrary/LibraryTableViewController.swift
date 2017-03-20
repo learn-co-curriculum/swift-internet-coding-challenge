@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LibraryTableViewController: UITableViewController, ReloadDelegate {
+class LibraryTableViewController: UITableViewController {
     
     var books: [Book] = []
     
@@ -22,7 +22,11 @@ class LibraryTableViewController: UITableViewController, ReloadDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+        createBooks {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,7 +75,6 @@ class LibraryTableViewController: UITableViewController, ReloadDelegate {
             completion()
         }
     }
-    
     
     //Added swipe to delete funtionality
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

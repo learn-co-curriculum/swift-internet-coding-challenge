@@ -120,7 +120,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Npw-s1-8pq">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="WL6-BI-rel"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="WL6-BI-rel">
+                            <connections>
+                                <action selector="discardChangesPressed:" destination="zPg-DJ-0Tg" id="Hob-W3-I1j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bookAuthor" destination="qhZ-oU-F0h" id="dsb-Ud-gAX"/>

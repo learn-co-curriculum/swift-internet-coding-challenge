@@ -15,8 +15,6 @@ class AddBookViewController: UIViewController {
     @IBOutlet weak var publisher: UITextField!
     @IBOutlet weak var bookURL: UITextField!
     
-    weak var delegate: ReloadDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Add Book"
@@ -30,7 +28,7 @@ class AddBookViewController: UIViewController {
     }
     
     func addBook() {
-        //Force unwraping is used here due to the fact that any nil
+        //Force unwraping is used here since we are checking for any nil values beforehand
         
         let book: [String: Any] = [
             "author": bookAuthor.text!,
@@ -49,34 +47,30 @@ class AddBookViewController: UIViewController {
         if allfieldsCompleted {
             addBook()
             self.dismiss(animated: true, completion: nil)
-            reloadView()
         } else {
-            //create UI Alert
+            //create UI Alert for incomplete fields
             let alertController = UIAlertController(title: "Incomplete", message: "Please complete all fields before submitting", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
             alertController.addAction(okAction)
+            self.present(alertController, animated: true)
         }
         print("All field completed? ",allfieldsCompleted)
     }
     
-    func reloadView() {
-        delegate?.reloadTableView()
+    @IBAction func discardChangesPressed(_ sender: Any) {
+        //create UIAlert to discard changes
+        let alertController = UIAlertController(title: "Discard Changes", message: "Are you sure you would like to discard any changes?", preferredStyle: UIAlertControllerStyle.alert)
+        //If confirmed, dismiss view
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true)
+        
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-// TODO: FIx the table so that it reloads with every POST request
-protocol ReloadDelegate: class {
-    func reloadTableView()
-}
