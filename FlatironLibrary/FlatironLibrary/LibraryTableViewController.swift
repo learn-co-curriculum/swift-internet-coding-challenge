@@ -82,9 +82,10 @@ class LibraryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.delete) {
-            dump(books[indexPath.row])
+        if editingStyle == .delete {
             let id = books[indexPath.row].bookID
+            books.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
             LibraryAPIManager.deleteBook(bookID: id, completion: {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
