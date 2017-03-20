@@ -13,21 +13,12 @@ class BookTableViewController: UITableViewController {
     let store = BookDataStore.sharedInstance
     
     @IBOutlet weak var add: UIBarButtonItem!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        store.generateBookList { _ in
-//            OperationQueue.main.addOperation({
-//                self.tableView.reloadData()
-//            })
-//        }
     }
     
-//    func updateWithNewData() {
-//        self.tableView.reloadData()
-//    }
-//    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         store.generateBookList { _ in
@@ -75,7 +66,7 @@ extension BookTableViewController {
         
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             print(store.books)
-            dump(store.books[indexPath.row])
+//            dump(store.books[indexPath.row])
              let id = store.books[indexPath.row].id
                 let idString = String(id)
                 print(idString)
@@ -86,12 +77,7 @@ extension BookTableViewController {
                             self.tableView.reloadData()
                         }
                     })
-                    
                 })
-            
-
-            
-       
         }
     }
 }

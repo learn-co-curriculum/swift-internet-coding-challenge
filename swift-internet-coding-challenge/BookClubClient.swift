@@ -58,7 +58,6 @@ extension BookClubClient {
 extension BookClubClient {
     class func delete(id: String, completion: @escaping () -> ()) {
         let endpoint = "https://flatironchallenge.herokuapp.com/books/\(id)"
-        print(endpoint)
         guard let url = URL(string: endpoint) else {fatalError("Not a valid URL")}
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"

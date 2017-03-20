@@ -30,10 +30,6 @@ class DetailBookViewController: UIViewController {
         guard let bookID = book?.id else { print ("no no no"); return}
         guard let book = book else {fatalError("Got no books!")}
 
-//        let date = Date()
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "MM.dd.yyyy"
-//        let result = formatter.string(from: date)
         
         let bookDict: [String: Any] = ["id": "\(bookID)",
                     "author": book.author,
@@ -53,11 +49,8 @@ class DetailBookViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.generateBookList { _ in
-//            OperationQueue.main.addOperation({
-//                self.setupLabels()  //calling this in viewWillAppear ruins labels
                 self.viewDidLoad()
                 print("view is loading")
-//            })
         }
     }
 
