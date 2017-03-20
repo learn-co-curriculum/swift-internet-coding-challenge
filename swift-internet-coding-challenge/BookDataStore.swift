@@ -12,13 +12,14 @@ import UIKit
 class BookDataStore {
 
 static let sharedInstance = BookDataStore()
+weak var delegate: BookDataStoreDelegate?
     
 var books = [Book]()
     fileprivate init() {}
     
     func generateBookList( completion: @escaping () -> ()) {
+        self.books.removeAll()
         BookClubClient.getBooksJSON { (JSONObject) in
-            self.books.removeAll()
             for book in JSONObject {
                 let finishedBook = Book(dictionary: book)
                 self.books.append(finishedBook)
@@ -27,4 +28,10 @@ var books = [Book]()
     }
 }
 
+}
+
+protocol BookDataStoreDelegate: class {
+    
+    func updateWithNewData()
+    
 }

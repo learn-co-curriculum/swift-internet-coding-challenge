@@ -8,9 +8,10 @@
 
 import UIKit
 
-class AddBookViewController: UIViewController {
+class AddBookViewController: UIViewController, BookDataStoreDelegate  {
     let store = BookDataStore.sharedInstance
     
+    var delegate: BookDataStoreDelegate?
     
     @IBAction func done(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -30,6 +31,7 @@ class AddBookViewController: UIViewController {
             print("dismissed")
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,13 +64,19 @@ class AddBookViewController: UIViewController {
     }
     
     func addBook() {
-        guard let bookToAdd: [String: Any] =  ["author":  author.text,
-                                         "publisher":  publisher.text,
-                                         "title": bookTitle.text,
-                                         "url": url.text] else {print ("Not a valid dictionary"); return}
+         let bookToAdd: [String: Any] =  ["author":  author.text ?? "no author",
+                                         "publisher":  publisher.text ??  "No publisher",
+                                         "title": bookTitle.text ?? "No title",
+                                         "url": url.text ?? "No url"]
+//        else {print ("Not a valid dictionary") return}
+       
         BookClubClient.add(new: bookToAdd) {
             print(bookToAdd)
         }
+    }
+    
+    func updateWithNewData() {
+        delegate?.updateWithNewData()
     }
     
     

@@ -17,15 +17,25 @@ class BookTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        store.generateBookList { _ in
+//            OperationQueue.main.addOperation({
+//                self.tableView.reloadData()
+//            })
+//        }
+    }
+    
+//    func updateWithNewData() {
+//        self.tableView.reloadData()
+//    }
+//    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         store.generateBookList { _ in
-            OperationQueue.main.addOperation({
+            DispatchQueue.main.async(execute: {
                 self.tableView.reloadData()
             })
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

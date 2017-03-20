@@ -66,7 +66,7 @@ class DetailBookViewController: UIViewController {
         bookTitle.text = book.title
         author.text = book.author
         bookPublisher.text = book.publisher
-        bookLastCheckedOut.text = book.lastcheckedoutby
+        bookLastCheckedOut.text = "Sejan + \(NSDate())"
         id.text = "\(book.id)"
     }
 

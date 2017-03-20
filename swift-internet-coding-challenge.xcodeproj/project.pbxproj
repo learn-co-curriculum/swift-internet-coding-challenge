@@ -27,13 +27,13 @@
 		7B02F90F1E785F7E0065FA12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B02F9121E785F7E0065FA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B02F9141E785F7E0065FA12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B02F91A1E785FFE0065FA12 /* BookClubClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookClubClient.swift; sourceTree = "<group>"; };
-		7B1B09B11E788CF60012DECB /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		7B1B09B31E7892AF0012DECB /* BookDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDataStore.swift; sourceTree = "<group>"; };
-		7B1B09B51E78A1670012DECB /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookTableViewController.swift; path = ../BookTableViewController.swift; sourceTree = "<group>"; };
-		7B1B09B71E78A46E0012DECB /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
-		7B1B09B91E78BBD80012DECB /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
-		7B1B09BB1E7977330012DECB /* DetailBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBookViewController.swift; sourceTree = "<group>"; };
+		7B02F91A1E785FFE0065FA12 /* BookClubClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookClubClient.swift; path = "swift-internet-coding-challenge/BookClubClient.swift"; sourceTree = "<group>"; };
+		7B1B09B11E788CF60012DECB /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = "swift-internet-coding-challenge/Book.swift"; sourceTree = "<group>"; };
+		7B1B09B31E7892AF0012DECB /* BookDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookDataStore.swift; path = "swift-internet-coding-challenge/BookDataStore.swift"; sourceTree = "<group>"; };
+		7B1B09B51E78A1670012DECB /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
+		7B1B09B71E78A46E0012DECB /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookTableViewCell.swift; path = "swift-internet-coding-challenge/BookTableViewCell.swift"; sourceTree = "<group>"; };
+		7B1B09B91E78BBD80012DECB /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddBookViewController.swift; path = "swift-internet-coding-challenge/AddBookViewController.swift"; sourceTree = "<group>"; };
+		7B1B09BB1E7977330012DECB /* DetailBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailBookViewController.swift; path = "swift-internet-coding-challenge/DetailBookViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +50,9 @@
 		7B02F8FC1E785F7E0065FA12 = {
 			isa = PBXGroup;
 			children = (
+				7B2B2CEA1E7F547F001E31DF /* Models */,
+				7B2B2CE91E7F5464001E31DF /* Views */,
+				7B2B2CE81E7F5433001E31DF /* Networking */,
 				7B02F9071E785F7E0065FA12 /* swift-internet-coding-challenge */,
 				7B02F9061E785F7E0065FA12 /* Products */,
 			);
@@ -66,20 +69,41 @@
 		7B02F9071E785F7E0065FA12 /* swift-internet-coding-challenge */ = {
 			isa = PBXGroup;
 			children = (
-				7B1B09B51E78A1670012DECB /* BookTableViewController.swift */,
 				7B02F9081E785F7E0065FA12 /* AppDelegate.swift */,
-				7B02F91A1E785FFE0065FA12 /* BookClubClient.swift */,
-				7B1B09B91E78BBD80012DECB /* AddBookViewController.swift */,
-				7B1B09B71E78A46E0012DECB /* BookTableViewCell.swift */,
-				7B1B09B31E7892AF0012DECB /* BookDataStore.swift */,
-				7B1B09B11E788CF60012DECB /* Book.swift */,
 				7B02F90C1E785F7E0065FA12 /* Main.storyboard */,
-				7B1B09BB1E7977330012DECB /* DetailBookViewController.swift */,
 				7B02F90F1E785F7E0065FA12 /* Assets.xcassets */,
 				7B02F9111E785F7E0065FA12 /* LaunchScreen.storyboard */,
 				7B02F9141E785F7E0065FA12 /* Info.plist */,
 			);
 			path = "swift-internet-coding-challenge";
+			sourceTree = "<group>";
+		};
+		7B2B2CE81E7F5433001E31DF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7B02F91A1E785FFE0065FA12 /* BookClubClient.swift */,
+				7B1B09B31E7892AF0012DECB /* BookDataStore.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		7B2B2CE91E7F5464001E31DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B1B09B91E78BBD80012DECB /* AddBookViewController.swift */,
+				7B1B09B71E78A46E0012DECB /* BookTableViewCell.swift */,
+				7B1B09B51E78A1670012DECB /* BookTableViewController.swift */,
+				7B1B09BB1E7977330012DECB /* DetailBookViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7B2B2CEA1E7F547F001E31DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B1B09B11E788CF60012DECB /* Book.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
