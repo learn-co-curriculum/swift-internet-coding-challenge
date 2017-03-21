@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51CF0A3D7DB4577D8F7A67D1 /* Pods_FlatironLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A62C5818ACF60B3C255C5A2 /* Pods_FlatironLibrary.framework */; };
+		988DE2A91E7798C60036B1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2A81E7798C60036B1C0 /* AppDelegate.swift */; };
+		988DE2AE1E7798C60036B1C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988DE2AC1E7798C60036B1C0 /* Main.storyboard */; };
+		988DE2B01E7798C60036B1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 988DE2AF1E7798C60036B1C0 /* Assets.xcassets */; };
+		988DE2B31E7798C60036B1C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988DE2B11E7798C60036B1C0 /* LaunchScreen.storyboard */; };
+		988DE2BE1E7798C60036B1C0 /* FlatironLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2BD1E7798C60036B1C0 /* FlatironLibraryTests.swift */; };
+		988DE2C91E7798C70036B1C0 /* FlatironLibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2C81E7798C70036B1C0 /* FlatironLibraryUITests.swift */; };
+		988DE2D71E7799A60036B1C0 /* LibraryAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2D61E7799A60036B1C0 /* LibraryAPIManager.swift */; };
+		988DE2DB1E779B670036B1C0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DE2DA1E779B670036B1C0 /* Book.swift */; };
+		98EAEB291E785250009255FA /* URLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EAEB281E785250009255FA /* URLData.swift */; };
+		98EAEB2B1E7857A7009255FA /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EAEB2A1E7857A7009255FA /* LibraryTableViewController.swift */; };
+		98EAEB301E78581B009255FA /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EAEB2F1E78581B009255FA /* BookTableViewCell.swift */; };
+		98EAEB321E7889BD009255FA /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EAEB311E7889BD009255FA /* BookDetailViewController.swift */; };
+		98EAEB341E78970A009255FA /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EAEB331E78970A009255FA /* AddBookViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		988DE2BA1E7798C60036B1C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DE29D1E7798C60036B1C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 988DE2A41E7798C60036B1C0;
+			remoteInfo = FlatironLibrary;
+		};
+		988DE2C51E7798C60036B1C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 988DE29D1E7798C60036B1C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 988DE2A41E7798C60036B1C0;
+			remoteInfo = FlatironLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		093129FCCD02EFF33FDFDAB9 /* Pods-FlatironLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatironLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlatironLibrary/Pods-FlatironLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		0A62C5818ACF60B3C255C5A2 /* Pods_FlatironLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlatironLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46B626C36B7B077FF88F495C /* Pods-FlatironLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatironLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlatironLibrary/Pods-FlatironLibrary.release.xcconfig"; sourceTree = "<group>"; };
+		988DE2A51E7798C60036B1C0 /* FlatironLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatironLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		988DE2A81E7798C60036B1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		988DE2AD1E7798C60036B1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		988DE2AF1E7798C60036B1C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		988DE2B21E7798C60036B1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		988DE2B41E7798C60036B1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988DE2B91E7798C60036B1C0 /* FlatironLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatironLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		988DE2BD1E7798C60036B1C0 /* FlatironLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatironLibraryTests.swift; sourceTree = "<group>"; };
+		988DE2BF1E7798C60036B1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988DE2C41E7798C60036B1C0 /* FlatironLibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatironLibraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		988DE2C81E7798C70036B1C0 /* FlatironLibraryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatironLibraryUITests.swift; sourceTree = "<group>"; };
+		988DE2CA1E7798C70036B1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988DE2D61E7799A60036B1C0 /* LibraryAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPIManager.swift; sourceTree = "<group>"; };
+		988DE2DA1E779B670036B1C0 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		98EAEB281E785250009255FA /* URLData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLData.swift; sourceTree = "<group>"; };
+		98EAEB2A1E7857A7009255FA /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
+		98EAEB2F1E78581B009255FA /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		98EAEB311E7889BD009255FA /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		98EAEB331E78970A009255FA /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		988DE2A21E7798C60036B1C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CF0A3D7DB4577D8F7A67D1 /* Pods_FlatironLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		988DE2B61E7798C60036B1C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		988DE2C11E7798C60036B1C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		555D7A3A0100BD43360BE33A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A62C5818ACF60B3C255C5A2 /* Pods_FlatironLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		836EDD851F846B6768D3C232 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				093129FCCD02EFF33FDFDAB9 /* Pods-FlatironLibrary.debug.xcconfig */,
+				46B626C36B7B077FF88F495C /* Pods-FlatironLibrary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		988DE29C1E7798C60036B1C0 = {
+			isa = PBXGroup;
+			children = (
+				988DE2A71E7798C60036B1C0 /* FlatironLibrary */,
+				988DE2BC1E7798C60036B1C0 /* FlatironLibraryTests */,
+				988DE2C71E7798C70036B1C0 /* FlatironLibraryUITests */,
+				988DE2A61E7798C60036B1C0 /* Products */,
+				836EDD851F846B6768D3C232 /* Pods */,
+				555D7A3A0100BD43360BE33A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		988DE2A61E7798C60036B1C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				988DE2A51E7798C60036B1C0 /* FlatironLibrary.app */,
+				988DE2B91E7798C60036B1C0 /* FlatironLibraryTests.xctest */,
+				988DE2C41E7798C60036B1C0 /* FlatironLibraryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		988DE2A71E7798C60036B1C0 /* FlatironLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				98EAEB2C1E7857AF009255FA /* Models */,
+				98EAEB2D1E7857B5009255FA /* Views */,
+				98EAEB2E1E7857C6009255FA /* Controllers */,
+				988DE2AF1E7798C60036B1C0 /* Assets.xcassets */,
+				988DE2AC1E7798C60036B1C0 /* Main.storyboard */,
+				988DE2B11E7798C60036B1C0 /* LaunchScreen.storyboard */,
+				988DE2B41E7798C60036B1C0 /* Info.plist */,
+			);
+			path = FlatironLibrary;
+			sourceTree = "<group>";
+		};
+		988DE2BC1E7798C60036B1C0 /* FlatironLibraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				988DE2BD1E7798C60036B1C0 /* FlatironLibraryTests.swift */,
+				988DE2BF1E7798C60036B1C0 /* Info.plist */,
+			);
+			path = FlatironLibraryTests;
+			sourceTree = "<group>";
+		};
+		988DE2C71E7798C70036B1C0 /* FlatironLibraryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				988DE2C81E7798C70036B1C0 /* FlatironLibraryUITests.swift */,
+				988DE2CA1E7798C70036B1C0 /* Info.plist */,
+			);
+			path = FlatironLibraryUITests;
+			sourceTree = "<group>";
+		};
+		98EAEB2C1E7857AF009255FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				988DE2A81E7798C60036B1C0 /* AppDelegate.swift */,
+				988DE2DA1E779B670036B1C0 /* Book.swift */,
+				98EAEB281E785250009255FA /* URLData.swift */,
+				988DE2D61E7799A60036B1C0 /* LibraryAPIManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		98EAEB2D1E7857B5009255FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98EAEB2F1E78581B009255FA /* BookTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		98EAEB2E1E7857C6009255FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				98EAEB2A1E7857A7009255FA /* LibraryTableViewController.swift */,
+				98EAEB331E78970A009255FA /* AddBookViewController.swift */,
+				98EAEB311E7889BD009255FA /* BookDetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		988DE2A41E7798C60036B1C0 /* FlatironLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 988DE2CD1E7798C70036B1C0 /* Build configuration list for PBXNativeTarget "FlatironLibrary" */;
+			buildPhases = (
+				DA5C8610A2E2B13D8192F648 /* [CP] Check Pods Manifest.lock */,
+				988DE2A11E7798C60036B1C0 /* Sources */,
+				988DE2A21E7798C60036B1C0 /* Frameworks */,
+				988DE2A31E7798C60036B1C0 /* Resources */,
+				3BA3ADC2A49ED018F8A7D7D8 /* [CP] Embed Pods Frameworks */,
+				77D246E811974D7EE467D356 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlatironLibrary;
+			productName = FlatironLibrary;
+			productReference = 988DE2A51E7798C60036B1C0 /* FlatironLibrary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		988DE2B81E7798C60036B1C0 /* FlatironLibraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 988DE2D01E7798C70036B1C0 /* Build configuration list for PBXNativeTarget "FlatironLibraryTests" */;
+			buildPhases = (
+				988DE2B51E7798C60036B1C0 /* Sources */,
+				988DE2B61E7798C60036B1C0 /* Frameworks */,
+				988DE2B71E7798C60036B1C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				988DE2BB1E7798C60036B1C0 /* PBXTargetDependency */,
+			);
+			name = FlatironLibraryTests;
+			productName = FlatironLibraryTests;
+			productReference = 988DE2B91E7798C60036B1C0 /* FlatironLibraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		988DE2C31E7798C60036B1C0 /* FlatironLibraryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 988DE2D31E7798C70036B1C0 /* Build configuration list for PBXNativeTarget "FlatironLibraryUITests" */;
+			buildPhases = (
+				988DE2C01E7798C60036B1C0 /* Sources */,
+				988DE2C11E7798C60036B1C0 /* Frameworks */,
+				988DE2C21E7798C60036B1C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				988DE2C61E7798C60036B1C0 /* PBXTargetDependency */,
+			);
+			name = FlatironLibraryUITests;
+			productName = FlatironLibraryUITests;
+			productReference = 988DE2C41E7798C60036B1C0 /* FlatironLibraryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		988DE29D1E7798C60036B1C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Kaypree Hodges";
+				TargetAttributes = {
+					988DE2A41E7798C60036B1C0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 75F4F97HUN;
+						ProvisioningStyle = Automatic;
+					};
+					988DE2B81E7798C60036B1C0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 75F4F97HUN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 988DE2A41E7798C60036B1C0;
+					};
+					988DE2C31E7798C60036B1C0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 75F4F97HUN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 988DE2A41E7798C60036B1C0;
+					};
+				};
+			};
+			buildConfigurationList = 988DE2A01E7798C60036B1C0 /* Build configuration list for PBXProject "FlatironLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 988DE29C1E7798C60036B1C0;
+			productRefGroup = 988DE2A61E7798C60036B1C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				988DE2A41E7798C60036B1C0 /* FlatironLibrary */,
+				988DE2B81E7798C60036B1C0 /* FlatironLibraryTests */,
+				988DE2C31E7798C60036B1C0 /* FlatironLibraryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		988DE2A31E7798C60036B1C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				988DE2B31E7798C60036B1C0 /* LaunchScreen.storyboard in Resources */,
+				988DE2B01E7798C60036B1C0 /* Assets.xcassets in Resources */,
+				988DE2AE1E7798C60036B1C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		988DE2B71E7798C60036B1C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		988DE2C21E7798C60036B1C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BA3ADC2A49ED018F8A7D7D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatironLibrary/Pods-FlatironLibrary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D246E811974D7EE467D356 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatironLibrary/Pods-FlatironLibrary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA5C8610A2E2B13D8192F648 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		988DE2A11E7798C60036B1C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EAEB2B1E7857A7009255FA /* LibraryTableViewController.swift in Sources */,
+				988DE2A91E7798C60036B1C0 /* AppDelegate.swift in Sources */,
+				98EAEB301E78581B009255FA /* BookTableViewCell.swift in Sources */,
+				98EAEB291E785250009255FA /* URLData.swift in Sources */,
+				988DE2DB1E779B670036B1C0 /* Book.swift in Sources */,
+				98EAEB321E7889BD009255FA /* BookDetailViewController.swift in Sources */,
+				98EAEB341E78970A009255FA /* AddBookViewController.swift in Sources */,
+				988DE2D71E7799A60036B1C0 /* LibraryAPIManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		988DE2B51E7798C60036B1C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				988DE2BE1E7798C60036B1C0 /* FlatironLibraryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		988DE2C01E7798C60036B1C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				988DE2C91E7798C70036B1C0 /* FlatironLibraryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		988DE2BB1E7798C60036B1C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 988DE2A41E7798C60036B1C0 /* FlatironLibrary */;
+			targetProxy = 988DE2BA1E7798C60036B1C0 /* PBXContainerItemProxy */;
+		};
+		988DE2C61E7798C60036B1C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 988DE2A41E7798C60036B1C0 /* FlatironLibrary */;
+			targetProxy = 988DE2C51E7798C60036B1C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		988DE2AC1E7798C60036B1C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				988DE2AD1E7798C60036B1C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		988DE2B11E7798C60036B1C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				988DE2B21E7798C60036B1C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		988DE2CB1E7798C70036B1C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		988DE2CC1E7798C70036B1C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		988DE2CE1E7798C70036B1C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 093129FCCD02EFF33FDFDAB9 /* Pods-FlatironLibrary.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 75F4F97HUN;
+				INFOPLIST_FILE = FlatironLibrary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Flatiron-School.FlatironLibrary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		988DE2CF1E7798C70036B1C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B626C36B7B077FF88F495C /* Pods-FlatironLibrary.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 75F4F97HUN;
+				INFOPLIST_FILE = FlatironLibrary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Flatiron-School.FlatironLibrary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		988DE2D11E7798C70036B1C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 75F4F97HUN;
+				INFOPLIST_FILE = FlatironLibraryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Flatiron-School.FlatironLibraryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlatironLibrary.app/FlatironLibrary";
+			};
+			name = Debug;
+		};
+		988DE2D21E7798C70036B1C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 75F4F97HUN;
+				INFOPLIST_FILE = FlatironLibraryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Flatiron-School.FlatironLibraryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlatironLibrary.app/FlatironLibrary";
+			};
+			name = Release;
+		};
+		988DE2D41E7798C70036B1C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 75F4F97HUN;
+				INFOPLIST_FILE = FlatironLibraryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Flatiron-School.FlatironLibraryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FlatironLibrary;
+			};
+			name = Debug;
+		};
+		988DE2D51E7798C70036B1C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 75F4F97HUN;
+				INFOPLIST_FILE = FlatironLibraryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Flatiron-School.FlatironLibraryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FlatironLibrary;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		988DE2A01E7798C60036B1C0 /* Build configuration list for PBXProject "FlatironLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				988DE2CB1E7798C70036B1C0 /* Debug */,
+				988DE2CC1E7798C70036B1C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		988DE2CD1E7798C70036B1C0 /* Build configuration list for PBXNativeTarget "FlatironLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				988DE2CE1E7798C70036B1C0 /* Debug */,
+				988DE2CF1E7798C70036B1C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		988DE2D01E7798C70036B1C0 /* Build configuration list for PBXNativeTarget "FlatironLibraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				988DE2D11E7798C70036B1C0 /* Debug */,
+				988DE2D21E7798C70036B1C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		988DE2D31E7798C70036B1C0 /* Build configuration list for PBXNativeTarget "FlatironLibraryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				988DE2D41E7798C70036B1C0 /* Debug */,
+				988DE2D51E7798C70036B1C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 988DE29D1E7798C60036B1C0 /* Project object */;
+}
